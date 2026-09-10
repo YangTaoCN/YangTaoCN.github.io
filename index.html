@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tao Mail Assistant</title>
+<style>
+  :root { --fg:#1b1f24; --muted:#5b6570; --line:#e3e8ee; --bg:#f7f9fb; --accent:#0b6bcb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--fg); background:var(--bg); line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 22px 80px; }
+  header h1 { font-size:34px; margin:0 0 8px; letter-spacing:-.02em; }
+  header p.tag { color:var(--muted); font-size:17px; margin:0 0 34px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:26px 28px; margin:0 0 18px; }
+  h2 { font-size:19px; margin:0 0 10px; }
+  p, li { font-size:15.5px; }
+  ul { padding-left:20px; margin:8px 0; }
+  code { background:#eef2f6; padding:2px 6px; border-radius:5px; font-size:13.5px; }
+  a { color:var(--accent); }
+  footer { color:var(--muted); font-size:13.5px; margin-top:34px; }
+  .links a { margin-right:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Tao Mail Assistant</h1>
+    <p class="tag">A private, single-user tool for reading and sending my own email, and managing my own calendar.</p>
+  </header>
+
+  <div class="card">
+    <h2>What this app does</h2>
+    <p>Tao Mail Assistant is a personal command-line utility that connects to <strong>my own</strong> mailbox and calendar. It is not a commercial product and has exactly one user: the owner of the account it is authorized against.</p>
+    <ul>
+      <li>Lists, searches and reads messages in my Gmail inbox over IMAP.</li>
+      <li>Sends email from my own address over SMTP.</li>
+      <li>Reads and creates events on my own Google Calendar.</li>
+      <li>Summarises what needs my attention, so I can act on it faster.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How it accesses data</h2>
+    <p>Access is granted through Google's OAuth 2.0 authorisation flow. The requested scopes are limited to what the tool needs:</p>
+    <ul>
+      <li><code>https://mail.google.com/</code> — read and send mail on my own account.</li>
+      <li><code>https://www.googleapis.com/auth/calendar</code> — manage events on my own calendar.</li>
+    </ul>
+    <p>Credentials and tokens are stored <strong>locally on my own computer</strong> with file permissions restricted to the owner. There is no server, no database, and no third party involved.</p>
+  </div>
+
+  <div class="card">
+    <h2>Data use</h2>
+    <p>Data accessed is used only to perform the actions listed above for the account owner. Nothing is sold, shared, transferred, or used for advertising, and no data leaves the owner's machine other than the direct calls to Google's own APIs.</p>
+  </div>
+
+  <div class="card links">
+    <h2>Policies</h2>
+    <p><a href="./privacy.html">Privacy Policy</a> <a href="./terms.html">Terms of Service</a></p>
+  </div>
+
+  <footer>
+    <p>Contact: <a href="mailto:yangtao.ch@gmail.com">yangtao.ch@gmail.com</a></p>
+    <p>Last updated: September 10, 2026</p>
+  </footer>
+</div>
+</body>
+</html>
